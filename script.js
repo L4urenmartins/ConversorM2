@@ -1,40 +1,35 @@
-function validarForm() {
-    var valorInput = document.getElementById('valor');
-    var categoriaSelect = document.getElementById('categoria');
-    var unidadeOrigemSelect = document.getElementById('unidadeOrigem');
-    var unidadeDestinoSelect = document.getElementById('unidadeDestino');
-    var resultado = document.getElementById('resultado');
+function converter() {
+    const valor = parseFloat(document.getElementById('valor').value);
+    const de = document.getElementById('de').value;
+    const para = document.getElementById('para').value;
 
-    // Verificar se o campo de valor está preenchido
-    if (valorInput.value.trim() === '') {
-        resultado.textContent = 'Insira um valor para converter.';
-        resultado.style.display = 'block';
-        return false;
+    let resultado;
+
+    if (de === para) {
+        resultado = valor;
+    } else if (de === 'metros') {
+        if (para === 'polegadas') {
+            resultado = valor * 39.37;
+        } else if (para === 'centimetros') {
+            resultado = valor * 100;
+        }
+    } else if (de === 'polegadas') {
+        if (para === 'metros') {
+            resultado = valor / 39.37;
+        } else if (para === 'centimetros') {
+            resultado = valor * 2.54;
+        }
+    } else if (de === 'centimetros') {
+        if (para === 'metros') {
+            resultado = valor / 100;
+        } else if (para === 'polegadas') {
+            resultado = valor / 2.54;
+        }
     }
 
-    // Verificar se uma categoria foi selecionada
-    if (categoriaSelect.value === '') {
-        resultado.textContent = 'Selecione uma categoria.';
-        resultado.style.display = 'block';
-        return false;
+    if (resultado) {
+        document.getElementById('resultado').textContent = `Resultado: ${resultado.toFixed(2)} ${para}`;
+    } else {
+        document.getElementById('resultado').textContent = 'Selecione unidades diferentes para conversão.';
     }
-
-    // Verificar se uma unidade de resultado foi validada
-    if (unidadeOrigemSelect.value === '') {
-        resultado.textContent = 'Selecione uma unidade de origem.';
-        resultado.style.display = 'block';
-        return false;
-    }
-
-    // Verificar se uma unidade de resultado foi validada
-    if (unidadeDestinoSelect.value === '') {
-        resultado.textContent = 'Selecione uma unidade de destino.';
-        resultado.style.display = 'block';
-        return false;
-    }
-
-    // A validação passou, significa que pode limpar a mensagem de erro e continuar com a conversão
-    resultado.textContent = '';
-    resultado.style.display = 'none';
-    converter();
 }

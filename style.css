@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #121212;
+    background: #e0c75f;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    background-color: #fafafa;
+    background-color: #dfd048;
     border-radius: 14px;
     margin: 14px;
     max-width: 600px;
@@ -25,7 +25,7 @@ body {
 }
 
 .header {
-    background: linear-gradient(120deg, #f2f24d 0%, #fff58b 100%);
+    background: linear-gradient(120deg, #f0f03a 0%, #f9f1b7 100%);
     padding: 24px;
     text-align: center;
     color: #FFF;
@@ -62,7 +62,7 @@ body {
 }
 
 .form button {
-    background-color: #f2f24d;
+    background-color: #dfd351;
     color: #FFF;
     width: 100%;
     border-radius: 14px;
@@ -72,8 +72,6 @@ body {
     cursor: pointer;
     margin-top: 14px;
 }
-
-/*mensagem de erro trocando a cor*/
 
 .form-content.error input {
     border-color: #ff3b25;

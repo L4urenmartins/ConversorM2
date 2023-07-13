@@ -9,57 +9,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
 
     <title>Conversor de medidas</title>
 </head>
 
+</head>
+
 <body>
+    <h1>Conversor de Comprimento</h1>
+    <div id="conversor">
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor">
 
-    <div class="container">
-        <section class="header">
-            <h2>Conversor de medidas</h2>
-        </section>
+        <label for="de">De:</label>
+        <select id="de">
+            <option value="metros">Metros</option>
+            <option value="polegadas">Polegadas</option>
+            <option value="centimetros">Centímetros</option>
+        </select>
 
-        <form id="form" class="form">
-            <div class="form-content">
-                <label for="valor">Valor a converter:</label>
-                <input type="number" id="valor" required>
-            </div>
+        <label for="para">Para:</label>
+        <select id="para">
+            <option value="metros">Metros</option>
+            <option value="polegadas">Polegadas</option>
+            <option value="centimetros">Centímetros</option>
+        </select>
 
-            <div class="form-content">
-                <label for="categoria">Categoria:</label>
-                <select id="categoria" onchange="atualizarUnidadesDestino()">
-                    <option value="comprimento">Comprimento</option>
-                    <option value="peso">Peso</option>
-                    <option value="temperatura">Temperatura</option>
-                </select>
-            </div>
+        <button onclick="converter()">Converter</button>
 
-            <div class="form-content">
-                <label for="unidadeOrigem">Unidade de resultado:</label>
-                <select id="unidadeOrigem" onchange="atualizarUnidadesDestino()">
-                    <!-- adicionada a unidade de resultado -->
-                </select>
-            </div>
-
-            <div class="form-content">
-                <label for="unidadeDestino">Unidade de resultado:</label>
-                <select id="unidadeDestino">
-                    <!-- unidades de resultados -->
-                </select>
-            </div>
-
-            <button type="button" onclick="converter()">Converter</button>
-
-            <p id="resultado" style="display: none;"></p>
-
-        </form>
-
+        <div id="resultado"></div>
     </div>
 
-    <script src="./script.js"></script>
 </body>
 
 </html>
