@@ -1,0 +1,74 @@
+/* Estilização do CSS */
+
+/* fonte do google fonts para estilizar a letra*/
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@100&display=swap');
+
+body {
+    font-family: 'Ysabeau SC', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#99c59c;
+}
+
+/* Foi estilizado parte por parte para ficar mais facil de entender cada parte ,
+e deixando tudo na mesma paleta de cores*/
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #9c6c87;
+}
+
+h1 {
+    text-align: center;
+    color: #af2674;
+
+}
+
+/* estilização do formulário*/
+
+form {
+    border: 4px solid #9c6c87;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #af2674;
+
+}
+
+select,
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #af2674;
+    border-radius: 4px;
+
+}
+
+button {
+    background-color: #af2674;
+    color: #9c6c87;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* o botão hover foi adicionado para gerar o resultado alterando a cor*/
+
+button:hover {
+    background-color: #9c6c87;
+    color: #af2674;
+}
+
+#resultadoConversao {
+    font-weight: bold;
+    color: #af2674;
+
+}

@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
+<!-- a parte do html é a mais facil de montar para ajudar linkando com CSS e JavaScript -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@100&display=swap" rel="stylesheet">
     <title>Conversor de medidas</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/script.js" defer></script>
 </head>
 
 <body>
     <main>
-        <h1>Conversor</h1>
+        <!-- Foi alterado o nome como "Conversor de Medidas" para o usuário saber para que serve exatamente -->
+        <h1>Conversor De Medidas</h1>
         <form class="principal" action="">
 
-            <label for="categoriasMedidas">Categorias Medidas</label>
-
+            <label for="categoriasMedidas">Medidas</label>
+            <!-- label foi utilizado para formar o coversor, dando o formato desejado -->
             <select class="categoriaMedidas" name="categoriasMedidas" id="categoriasMedidas">
                 <option value="" selected disabled>selecione Medida</option>
                 <option value="temperatura">Temperatura</option>
@@ -31,7 +34,6 @@
 
             </select>
 
-
             <label for="unidadeDeSaida">Unidades de Saida</label>
             <select name="unidadesDeSaida" id="unidadesDeSaida"></select>
             <label for="valor">Valor</label>
@@ -39,6 +41,7 @@
             <button id="conversao">Conversão</button>
             <label for="resultadoConversao">Resultado Conversão</label>
             <span id="resultadoConversao"></span>
+            <!-- a tag spam foi dificil de funcionar e não gerava o resultado, depois de linkar o id no JavaScript, começou a funcionar -->
         </form>
 
     </main>

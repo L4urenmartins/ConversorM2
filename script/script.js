@@ -1,3 +1,6 @@
+/*  iniciando com variaveis para cada actegoria */
+
+
 var categoriaMedidas = document.getElementById("categoriasMedidas");
 var unidadesDeEntrada = document.getElementById('unidadesDeEntrada');
 var unidadesDeSaida = document.getElementById('unidadesDeSaida');
@@ -133,7 +136,7 @@ conversao.addEventListener('click', function () {
     }
 })
 
-//  temperatura
+// conversão de temperatura usando const  para armazenar os resultados intermediários e return para retornar o resultado final
 function celsiusFr(celsius) {
     const formulaFr = (celsius * 9 / 5) + 32
     return formulaFr
@@ -164,7 +167,7 @@ function frKelvin(fr) {
     return formulaKelvin
 }
 
-// Aqui converte para o peso
+// Aqui converte para o peso usando o mesmo método que aprendi com a temperatura
 function quilogramasGramas(quilogramas) {
     const quilosgramasGramas = quilogramas * 1000
     return quilosgramasGramas
@@ -195,7 +198,7 @@ function librasGramas(libras) {
     return librasGramas
 }
 
-// Aqui converte para a temperatura
+// Aqui converte para a temperatura usando variáveis e const que foi mais facil de entender e foi o que fez o código funcionar
 function metrosCentimetros(metros) {
     const metrosCentimetros = metros * 100
     return metrosCentimetros
@@ -225,3 +228,4 @@ function polegadasCentimetros(polegadas) {
     const polegadasCentimetros = polegadas * 2.54
     return polegadasCentimetros
 } 
+
